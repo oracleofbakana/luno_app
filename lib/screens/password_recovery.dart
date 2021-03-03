@@ -6,6 +6,9 @@ class PasswordRecovery extends StatelessWidget {
   static const String id = 'PasswordRecovery';
   @override
   Widget build(BuildContext context) {
+    double _width = MediaQuery.of(context).size.width;
+    double _height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(
@@ -20,16 +23,13 @@ class PasswordRecovery extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
-          width: 400.0,
-            height: 800.0,
+         // width: 400.0,
+           // height: 800.0,
           child: Stack(
-            //verticalDirection: VerticalDirection.down,
-            //crossAxisAlignment: CrossAxisAlignment.center,
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Positioned(
-                left: 150,
-                top: 5,
+                top: _height * 0,
+                left: _width * 0.42,
                 child: Container(
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -49,8 +49,8 @@ class PasswordRecovery extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 100.0,
-                left: 75.0,
+                top: _height * 0.08,
+                left: _width * 0.18,
                 child: Text(
                   'Account recovery',
                   style: TextStyle(
@@ -64,66 +64,67 @@ class PasswordRecovery extends StatelessWidget {
 
 
               Positioned(
-                top: 160.0,
-                left:10.0,
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width * 0.85,
-
-                child: RichText(
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.clip,
-                    text: TextSpan(
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: "Let's change your ",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            color: Color(0xffb1b9c8),
-                            fontSize: 16.0,
-                          ),
-                        ),
-                        TextSpan(
-                            text: 'password ',
+                top: _height * 0.14,
+                left: _width * 0.01,
+                child: SizedBox(
+                  height: _height * 0.05,
+                  width: _width,
+                  child: RichText(
+                    softWrap: true,
+                      textAlign: TextAlign.center,
+                      overflow: TextOverflow.clip,
+                      text: TextSpan(
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: "Let's change your ",
                             style: TextStyle(
-                              color: Color(0xff172d48),
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xffb1b9c8),
+                              fontSize: 16.0,
+                            ),
+                          ),
+                          TextSpan(
+                              text: 'password ',
+                              style: TextStyle(
+                                color: Color(0xff172d48),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16.0,
+                                decorationStyle: TextDecorationStyle.solid,
+                              ),
+                          ),
+                          TextSpan(
+                            text: 'by confirming some of your ',
+                            style: TextStyle(
+                              color: Color(0xffb1b9c8),
+                              fontWeight: FontWeight.w700,
                               fontSize: 16.0,
                               decorationStyle: TextDecorationStyle.solid,
                             ),
-                        ),
-                        TextSpan(
-                          text: 'by confirming some of your ',
-                          style: TextStyle(
-                            color: Color(0xffb1b9c8),
-                            fontWeight: FontWeight.w700,
-                            fontSize: 16.0,
-                            decorationStyle: TextDecorationStyle.solid,
                           ),
-                        ),
-                        TextSpan(
-                          text: 'personal information ',
-                          style: TextStyle(
-                            color: Color(0xff172d48),
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                            decorationStyle: TextDecorationStyle.solid,
+                          TextSpan(
+                            text: 'personal information ',
+                            style: TextStyle(
+                              color: Color(0xff172d48),
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                              decorationStyle: TextDecorationStyle.solid,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
+                ),
               ),
 
               Positioned(
-                top: 230.0,
-                left:10.0,
+                top: _height * 0.24,
+                left: _width * 0.08,
                 child: FlatButton(
                   padding: EdgeInsets.all(15.0),
                   onPressed: () {
                     //Navigator.pushNamed(context, PasswordScreen.id);
                   },
-                  minWidth: 370.0,
-                  height: 30.0,
+                  minWidth: _width * 0.85,
                   color: Color(0xff0195fa),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),

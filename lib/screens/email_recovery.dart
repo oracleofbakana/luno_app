@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 class EmailRecovery extends StatelessWidget {
   static const String id = 'EmailRecovery';
   final String emailImage = 'assets/images/emailImage.png';
-  //static double contextHeight = MediaQuery.of(context).size.height;
 
   @override
   Widget build(BuildContext context) {
+    double _width = MediaQuery.of(context).size.width;
+    double _height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(
@@ -22,30 +23,23 @@ class EmailRecovery extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Center(
         child: Container(
-          width: 400.0,
-          height: 900.0,
           child: Stack(
-            //verticalDirection: VerticalDirection.down,
-            //crossAxisAlignment: CrossAxisAlignment.center,
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Positioned(
-                left: 150,
-                top: 0,
+                top: _height * 0,
+                left: _width * 0.42,
                 child: Container(
-                  height: 80,
-                  width: 80,
+                  height: _height * 0.10,
+                  width: _width * 0.15,
                   child: Image.asset(
                     emailImage,
                     fit: BoxFit.fitHeight,
                   ),
-                  //height: 200.0,
-                  //width: 200.0,
                 ),
               ),
               Positioned(
-                top: 90.0,
-                left: 75.0,
+                top: _height * 0.12,
+                left: _width * 0.185,
                 child: Text(
                   'Confirm your email',
                   style: TextStyle(
@@ -59,9 +53,8 @@ class EmailRecovery extends StatelessWidget {
 
 
               Positioned(
-                top: 150.0,
-                left:10.0,
-               // height: MediaQuery.of(context).size.height,
+                top: _height * 0.17,
+                left: _width * 0.07,
                 width: MediaQuery.of(context).size.width * 0.85,
                 child: RichText(
                   textAlign: TextAlign.center,
@@ -82,10 +75,10 @@ class EmailRecovery extends StatelessWidget {
               ),
 
               Positioned(
-                top: 200.0,
-                left: 0.0,
+                top: _height * 0.23,
+                left: _width * 0.05,
                 child: SizedBox(
-                  width: 400.0,
+                  width: _width * 0.9,
                   child: Padding(
                     padding: EdgeInsets.all(12.0),
                       child: TextField(
@@ -104,15 +97,15 @@ class EmailRecovery extends StatelessWidget {
                 ),
 
               Positioned(
-                top: 315.0,
-                left:10.0,
+                top: _height * 0.35,
+                left: _width * 0.09,
                 child: FlatButton(
                   padding: EdgeInsets.all(15.0),
                   onPressed: () {
                     //Navigator.pushNamed(context, PasswordScreen.id);
                   },
-                  minWidth: 370.0,
-                  height: 30.0,
+                  minWidth: _width * 0.8,
+                  height: _height * 0.05,
                   color: Color(0xff0195fa),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),

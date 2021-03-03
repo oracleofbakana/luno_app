@@ -55,11 +55,9 @@ class _WelcomeMenuState extends State<WelcomeMenu> {
         children: <Widget>[
           Positioned(
             top: 0,
-            // left: 0,
             child: Container(
               width: MediaQuery.of(context).size.width * 1.0,
               height: MediaQuery.of(context).size.height * 0.5,
-              //color: Color(0xff12326b),
               //alignment: Alignment.lerp(
               //Alignment.topCenter, Alignment.bottomCenter, 0.2),
               child: CustomPaint(
@@ -77,29 +75,9 @@ class _WelcomeMenuState extends State<WelcomeMenu> {
               ),
             ),
           ),
-          // child: Container(
-          //     decoration: BoxDecoration(
-          //       // boxShadow: [
-          //       //   BoxShadow(
-          //       //     color: Colors.grey.withOpacity(0.5),
-          //       //     spreadRadius: 5,
-          //       //     blurRadius: 7,
-          //       //     offset: Offset(0, 3), // changes position of shadow
-          //       //   ),
-          //       // ],
 
-          //       //color: Color(0xff12326b),
-          //       // borderRadius: BorderRadius.only(
-          //       //   bottomLeft: Radius.circular(35.0),
-          //       //   bottomRight: Radius.circular(35.0),
-          //       // ),
-          //     ),
-          //
-
-          // ),
           Positioned(
             top: MediaQuery.of(context).size.height * 0.26,
-            // left: 0,
             child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * 0.70,

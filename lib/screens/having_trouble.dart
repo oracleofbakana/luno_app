@@ -15,9 +15,11 @@ class HavingTrouble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double _width = MediaQuery.of(context).size.width;
     return Container(
       color: Colors.white,
       height: MediaQuery.of(context).size.height* 0.2,
+
       child: Container(
         padding: EdgeInsets.all(20.0),
         decoration: BoxDecoration(
@@ -36,7 +38,7 @@ class HavingTrouble extends StatelessWidget {
                Icon(Icons.email, color: Color(0xff2892e2),size: 28.0,
                ),
                SizedBox(
-                 width: 20.0,
+                 width: _width * 0.08,
                ),
                RichText(
                  text: TextSpan(
@@ -60,7 +62,7 @@ class HavingTrouble extends StatelessWidget {
                 Icon(FontAwesomeIcons.asterisk, color: Color(0xff2892e2),size: 28.0,
                 ),
                 SizedBox(
-                  width: 20.0,
+                  width: _width * 0.08,
                 ),
                 RichText(
                   text: TextSpan(
@@ -84,7 +86,7 @@ class HavingTrouble extends StatelessWidget {
                 Icon(FontAwesomeIcons.file,color: Color(0xff2892e2),size: 28.0,
                 ),
                 SizedBox(
-                  width: 20.0,
+                  width: _width * 0.08,
                 ),
                 RichText(
                   text: TextSpan(
