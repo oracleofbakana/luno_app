@@ -10,7 +10,7 @@ WelcomeMenuContainers({this.iconImage, this.containerTitle});
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 0.9,
-      height: 75.0,
+      height: MediaQuery.of(context).size.width * 0.14,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(
